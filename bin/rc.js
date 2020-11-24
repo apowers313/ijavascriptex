@@ -48,7 +48,7 @@ var DEBUG;
 var log;
 var dontLog = function dontLog() {};
 var doLog = function doLog() {
-    process.stderr.write("IJS: ");
+    process.stderr.write("IJSEX: ");
     console.error.apply(this, arguments);
 };
 
@@ -56,7 +56,7 @@ if (process.env.DEBUG) {
     DEBUG = true;
 
     try {
-        doLog = require("debug")("IJS:");
+        doLog = require("debug")("IJSEX:");
     } catch (err) {}
 }
 
@@ -69,9 +69,9 @@ log = DEBUG ? doLog : dontLog;
  * @property            context
  * @property            context.path
  * @property {String}   context.path.node     Path to Node.js shell
- * @property {String}   context.path.root     Path to IJavascript root folder
- * @property {String}   context.path.kernel   Path to IJavascript kernel
- * @property {String}   context.path.images   Path to IJavascript images folder
+ * @property {String}   context.path.root     Path to IJavascriptEX root folder
+ * @property {String}   context.path.kernel   Path to IJavascriptEX kernel
+ * @property {String}   context.path.images   Path to IJavascriptEX images folder
  * @property {Object}   context.packageJSON   Contents of npm package.json
  * @property            context.flag
  * @property {Boolean}  context.flag.debug          --debug
@@ -131,23 +131,23 @@ function getPackageVersion(packageName) {
 var FLAGS = [{
     excludeIfInstaller: true,
     flag: "help",
-    description: "show IJavascript and Jupyter/IPython help",
+    description: "show IJavascriptEX and Jupyter/IPython help",
     parse: function(context, arg) {
         context.args.frontend.push(arg);
     },
     showUsage: true,
 }, {
     flag: "version",
-    description: "show IJavascript version",
+    description: "show IJavascriptEX version",
     parse: function(context, arg) {
         console.log(context.packageJSON.version);
     },
     exit: true,
 }, {
     flag: "versions",
-    description: "show IJavascript and library versions",
+    description: "show IJavascriptEX and library versions",
     parse: function(context, arg) {
-        console.log("ijavascript", context.packageJSON.version);
+        console.log("ijavascriptex", context.packageJSON.version);
         console.log("jmp", getPackageVersion("jmp"));
         console.log("jp-kernel", getPackageVersion("jp-kernel"));
         console.log("nel", getPackageVersion("nel"));
@@ -167,7 +167,7 @@ var FLAGS = [{
     },
 }, {
     prefixedFlag: "help",
-    description: "show IJavascript help",
+    description: "show IJavascriptEX help",
     parse: function(context, arg) {
     },
     showUsage: true,
@@ -188,7 +188,7 @@ var FLAGS = [{
     },
 }, {
     prefixedFlag: "install=[local|global]",
-    description: "install IJavascript kernel",
+    description: "install IJavascriptEX kernel",
     parse: function(context, arg) {
         context.flag.install = getValue(arg);
         if (context.flag.install !== "local" &&
@@ -322,7 +322,7 @@ function parseCommandArgs(context, options) {
         ].concat(context.args.kernel);
     } else {
         context.args.kernel = [
-            (process.platform === "win32") ? "ijskernel.cmd" : "ijskernel",
+            (process.platform === "win32") ? "ijsexkernel.cmd" : "ijsexkernel",
         ].concat(context.args.kernel);
     }
 
@@ -508,7 +508,7 @@ function setProtocol(context) {
             context.args.kernel.join("', '")
         ));
     } else if (context.args.frontend[1] === "console") {
-        context.args.frontend.push("--kernel=javascript");
+        context.args.frontend.push("--kernel=javascriptex");
     }
 
     if (context.frontend.majorVersion < 3 &&
@@ -534,15 +534,15 @@ function installKernelAsync(context, callback) {
 
     // Create temporary spec folder
     var tmpdir = makeTmpdir();
-    var specDir = path.join(tmpdir, "javascript");
+    var specDir = path.join(tmpdir, "javascriptex");
     fs.mkdirSync(specDir);
 
     // Create spec file
     var specFile = path.join(specDir, "kernel.json");
     var spec = {
         argv: context.args.kernel,
-        display_name: "JavaScript (Node.js)",
-        language: "javascript",
+        display_name: "JavaScriptEX (Node.js)",
+        language: "javascriptex",
     };
     fs.writeFileSync(specFile, JSON.stringify(spec));
 

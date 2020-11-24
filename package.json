@@ -1,33 +1,31 @@
 {
-    "name": "ijavascript",
-    "version": "5.2.0",
-    "description": "IJavascript is a Javascript kernel for the Jupyter notebook",
+    "name": "@apowers313/ijavascriptex",
+    "version": "0.8.1",
+    "description": "IJavascriptEX is a Javascript kernel for the Jupyter notebook - now extended!",
     "keywords": [
         "javascript",
         "kernel",
         "ipython",
         "jupyter"
     ],
-    "homepage": "https://n-riesco.github.io/ijavascript",
     "bugs": {
-        "url": "https://github.com/n-riesco/ijavascript/issues"
+        "url": "https://github.com/apowers313/ijavascriptex/issues"
     },
     "license": "BSD-3-Clause",
     "author": {
-        "name": "Nicolas Riesco",
-        "email": "enquiries@nicolasriesco.net",
-        "url": "http://www.nicolasriesco.net/"
+        "name": "Adam Powers",
+        "email": "apowers@ato.ms"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/n-riesco/ijavascript.git"
+        "url": "https://github.com/apowers313/ijavascriptex.git"
     },
     "bin": {
-        "ijs": "bin/ijavascript.js",
-        "ijsconsole": "bin/ijsconsole.js",
-        "ijsinstall": "bin/ijsinstall.js",
-        "ijskernel": "lib/kernel.js",
-        "ijsnotebook": "bin/ijsnotebook.js"
+        "ijsex": "bin/ijavascriptex.js",
+        "ijsexconsole": "bin/ijsexconsole.js",
+        "ijsexinstall": "bin/ijsexinstall.js",
+        "ijsexkernel": "lib/kernel.js",
+        "ijsexnotebook": "bin/ijsexnotebook.js"
     },
     "dependencies": {
         "jp-kernel": "1 || 2"

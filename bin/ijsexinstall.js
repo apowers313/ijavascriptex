@@ -43,32 +43,20 @@ var parseCommandArgs = rc.parseCommandArgs;
 var setJupyterInfoAsync = rc.setJupyterInfoAsync;
 var setPaths = rc.setPaths;
 var setProtocol = rc.setProtocol;
-var spawnFrontend = rc.spawnFrontend;
 
 setPaths(context);
 
 readPackageJson(context);
 
 parseCommandArgs(context, {
-    showUndefined: true,
-    includeDeprecated: true,
-
-    flagPrefix: "ijs",
+    installer: true,
 
     usageHeader: [
-        "IJavascript Notebook",
+        "IJavascriptEX Kernel Installer",
         "",
         "Usage:",
         "",
-        "    ijs <options>",
-    ].join("\n"),
-
-    usageFooter: [
-        "and any other options recognised by the Jupyter notebook; run:",
-        "",
-        "    jupyter notebook --help",
-        "",
-        "for a full list.",
+        "    ijsexinstall <options>",
     ].join("\n"),
 });
 
@@ -77,9 +65,5 @@ setJupyterInfoAsync(context, function() {
 
     installKernelAsync(context, function() {
         log("CONTEXT:", context);
-
-        if (!context.flag.install) {
-            spawnFrontend(context);
-        }
     });
 });
