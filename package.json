@@ -1,5 +1,5 @@
 {
-    "name": "@apowers313/ijavascriptex",
+    "name": "ijavascriptex",
     "version": "0.9.0",
     "description": "IJavascriptEX is a Javascript kernel for the Jupyter notebook - now extended!",
     "keywords": [
