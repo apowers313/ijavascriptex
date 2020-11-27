@@ -52,14 +52,14 @@ setPaths(context);
 readPackageJson(context);
 
 parseCommandArgs(context, {
-    flagPrefix: "ijs",
+    flagPrefix: "ijsex",
 
     usageHeader: [
         "IJavascript Console",
         "",
         "Usage:",
         "",
-        "    ijsconsole <options>",
+        "    ijsexconsole <options>",
     ].join("\n"),
 
     usageFooter: [

@@ -50,14 +50,14 @@ setPaths(context);
 readPackageJson(context);
 
 parseCommandArgs(context, {
-    flagPrefix: "ijs",
+    flagPrefix: "ijsex",
 
     usageHeader: [
         "IJavascript Notebook",
         "",
         "Usage:",
         "",
-        "    ijsnotebook <options>",
+        "    ijsexnotebook <options>",
     ].join("\n"),
 
     usageFooter: [

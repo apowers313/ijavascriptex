@@ -1,4 +1,4 @@
-# Contributing to IJavascript
+# Contributing to IJavascriptEX
 
 First of all, thank you for taking the time to contribute.
 
@@ -7,7 +7,7 @@ Here, you will find relevant information for contributing to this project.
 ## Issue tracker
 
 Please, feel free to use the [issue
-tracker](https://github.com/n-riesco/ijavascript/issues) to report any problems
+tracker](https://github.com/apowers313/ijavascriptex/issues) to report any problems
 you encounter or any enhancements you would like to see implemented. To
 facilitate the process of fixing a problem, please, include the following
 information in your report:
@@ -15,7 +15,7 @@ information in your report:
 - IJavascript version. Please, run the command:
 
   ```sh
-  ijs --version
+  ijsex --version
   ```
 
 ## Code contributions
@@ -24,9 +24,6 @@ information in your report:
   before accepting any pull requests, it is important that the copyright holder
   of a pull request acknowledges their consent. To express this consent, please,
   ensure the AUTHORS file has been updated accordingly.
-
-- If your contribution is more than a few lines, please, open an issue in the
-  [issue tracker](https://github.com/n-riesco/nel/issues).
 
 - This package uses Mocha for testing. The tests are located in folder
   `test/` and to run them:
