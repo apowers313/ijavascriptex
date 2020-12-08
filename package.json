@@ -32,13 +32,13 @@
     },
     "devDependencies": {
         "debug": "2",
-        "eslint": "2",
+        "eslint": "^7.15.0",
         "eslint-plugin-jsdoc": "^30.7.8",
         "eslint-plugin-mocha": "^8.0.0",
         "eslint-plugin-old-c-programmer": "^1.0.1",
         "jmp": "1 || 2",
-        "jsdoc": "3",
-        "mocha": "3",
+        "jsdoc": "^3.6.6",
+        "mocha": "^8.2.1",
         "uuid": "3"
     },
     "engineStrict": true,
