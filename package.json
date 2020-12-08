@@ -33,6 +33,9 @@
     "devDependencies": {
         "debug": "2",
         "eslint": "2",
+        "eslint-plugin-jsdoc": "^30.7.8",
+        "eslint-plugin-mocha": "^8.0.0",
+        "eslint-plugin-old-c-programmer": "^1.0.1",
         "jmp": "1 || 2",
         "jsdoc": "3",
         "mocha": "3",
