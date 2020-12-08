@@ -6,3 +6,5 @@ npm-debug.log
 yarn.lock
 .ipynb_checkpoints/
 .ropeproject/
+.DS_Store
+*~
