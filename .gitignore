@@ -8,3 +8,4 @@ yarn.lock
 .ropeproject/
 .DS_Store
 *~
+Untitled*.ipynb
