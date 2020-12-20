@@ -4,6 +4,34 @@ IJavascriptEX is a JavaScript kernel for Jupyter. It is an EXtended version of t
 it as close as possible to the IPython experience by adding `%magic` commands,
 `!shell` executables, and `{variable}` substitution.
 
+* %addmagic
+* %require
+* %echo
+* !cmd
+* {var} substitution
+* $$.addMagic
+* stdmagic
+* output caching
+* example notebook
+* adding your own magic
+  * name, function
+    * function args
+    * doc, brief, ctx
+    * function context
+      * exec
+      * cmdMap
+      * history
+      * args
+      * line
+      * code
+  * name, cmdObj
+  * documentation
+    * cmdObj.doc || cmdObj.fn.
+    * cmdObj.brief || cmdObj.fn.brief
+  * special things
+    * any symbol allowed
+    * special matcher
+
 # IJavascript
 IJavascript is a Javascript kernel for the [Jupyter
 notebook](http://jupyter.org/). The Jupyter notebook combines the creation of
