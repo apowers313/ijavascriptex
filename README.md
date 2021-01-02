@@ -1,3 +1,7 @@
+__This proof of concept has been replaced by [magicpatch](https://github.com/apowers313/magicpatch). Use that instead.__
+
+---
+
 # IJavascriptEX
 IJavascriptEX is a JavaScript kernel for Jupyter. It is an EXtended version of the
 [IJavascript](http://n-riesco.github.io/ijavascript) kernel that attempts to make
